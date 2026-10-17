@@ -1515,6 +1515,9 @@ GameObject:
   - component: {fileID: 664672503}
   - component: {fileID: 664672502}
   - component: {fileID: 664672504}
+  - component: {fileID: 664672506}
+  - component: {fileID: 664672505}
+  - component: {fileID: 664672507}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1670,7 +1673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseLookX
   playerTransform: {fileID: 664672498}
-  mouseSensX: 5
+  mouseSensX: 50
 --- !u!114 &664672502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,7 +1699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseLookY
   cameraTransform: {fileID: 330585546}
-  mouseSensY: 5
+  mouseSensY: 50
 --- !u!114 &664672504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,6 +1715,47 @@ MonoBehaviour:
   rb: {fileID: 664672500}
   movementSpeed: 10
   jumpForce: 300
+--- !u!114 &664672505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664672494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54107c6157544bf5aa2c6c3039af537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
+  health: 5
+--- !u!114 &664672506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664672494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6706af5bb86349358015297a325db04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
+  projectilePrefab: {fileID: 4075278594369562457, guid: b7b5c9dad66ed4859b84f91b454e5440, type: 3}
+  launchSpeed: 15
+  spawnDistance: 1
+--- !u!114 &664672507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664672494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91583804c6fe46499a7ed8ae2884be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RayShooter
+  indicatorLifetime: 1
 --- !u!1 &732231802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,6 +3374,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223751054}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1363409687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363409688}
+  - component: {fileID: 1363409689}
+  m_Layer: 0
+  m_Name: SYSTEM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1363409688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363409687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1363409689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363409687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fd27d3a0e264914ad7cd89df52f780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  enemyPrefab: {fileID: 5060564011370440863, guid: 2e7c0171c1a3b4eada0324c579a6adce, type: 3}
+  spawnPosition: {x: 0, y: 1.6, z: 0}
 --- !u!1 &1425265641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4672,6 +4762,7 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1363409688}
   - {fileID: 664672498}
   - {fileID: 347396392}
   - {fileID: 43746145}
