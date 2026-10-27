@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df1005a5a4c215f488d237227caecaf8, type: 2}
+  - {fileID: 2100000, guid: 8c16e2163437960b88037fe09dfdfbe3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,5 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3034ad823524b4aaa205b558efc9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  damage: 1
   lifetime: 10

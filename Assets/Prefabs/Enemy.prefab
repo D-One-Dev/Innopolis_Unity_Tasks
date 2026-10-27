@@ -71,7 +71,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1240745095b64423dad8e7eb50e97a14, type: 2}
+  - {fileID: 2100000, guid: 75c16dff7466f68b399615daca9fdffe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   wallStopRadius: 0.4
   wallStopGap: 0.2
   fireballPrefab: {fileID: 1122855157171802988, guid: 8c083d8fac6914f95bf599c0a11f551b, type: 3}
+  fireInterval: 1.5
   sightRange: 20
   sightRadius: 0.25
 --- !u!114 &4288577085352579606
